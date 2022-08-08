@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: northwind_lighthouse
+    schema: northwind_lighthouse
+    description: This is the northwind erp postgres database replica
+    tables:
+      - name: orders
+        description: |
+          One record per order. Includes cancelled and deleted orders.
+        columns:
+          - name: order_id
+            description: Primary key of the orders table
+            tests:
+              - unique
+              - not_null
+          - name: status
+            description: Note that the status can change over time
+  
+      - name: categories
+      - name: customers
+      - name: employees
+      - name: order_details
+      - name: products
+      - name: shippers
+      - name: suppliers
