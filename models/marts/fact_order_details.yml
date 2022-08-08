@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: fact_order_details
+    columns:
+      - name: order_id
+        description: The primary key of the order
+
+
+      - name: employee_fk
+        description: The foreign key to the employees dimension table
